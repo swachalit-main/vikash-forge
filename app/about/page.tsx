@@ -13,6 +13,8 @@ const TIMELINE = [
   { year: '2012', event: 'Secured long-term supply agreements with major Indian Railways component OEMs.' },
   { year: '2018', event: 'Upgraded to fully automated billet heating and temperature-controlled forging process.' },
   { year: '2024', event: 'Serving 150+ clients across Railways, Automotive, and Heavy Engineering sectors.' },
+  { year: '2025', event: 'Supplied more than 1,000 wheels to all SAIL units across India within a span of one year.', },
+  { year: '2026', event: 'Delivered more than 1 lakh orders to our valued customers.', },
 ]
 
 const WHY_US = [
