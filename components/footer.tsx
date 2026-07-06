@@ -7,6 +7,7 @@ const PRODUCT_LINKS = [
   { label: 'Hook Nut', href: '/products/hook-nut' },
   { label: 'Forged Shaft', href: '/products/shaft' },
   { label: 'Forged Pinion', href: '/products/pinion' },
+  { label: 'Wheel Assembly', href: '/products/wheel-assembly' },
 ]
 
 const COMPANY_LINKS = [
