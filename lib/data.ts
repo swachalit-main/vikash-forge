@@ -13,7 +13,7 @@ export const PRODUCTS = [
       'Coupling disc blanks',
     ],
     materials: ['EN9', 'EN8D', 'EN19', 'EN24'],
-    image: '/images/product-round.jpg',
+    image: '/images/Forged-Round.jpg',
     specs: [
       { parameter: 'Diameter Range', value: '50 mm – 600 mm' },
       { parameter: 'Weight Range', value: '1 kg – 500 kg' },
@@ -38,7 +38,7 @@ export const PRODUCTS = [
       'Forge shop manipulator hooks',
     ],
     materials: ['EN8D', 'CL4', 'EN24', 'CL2'],
-    image: '/images/product-hook-nut.jpg',
+    image: '/images/product-hook-nut-1.jpg',
     specs: [
       { parameter: 'Load Capacity', value: '1 Ton – 100 Ton' },
       { parameter: 'Thread Type', value: 'Square / ACME / Trapezoidal' },
@@ -63,7 +63,7 @@ export const PRODUCTS = [
       'Gearbox input / output shafts',
     ],
     materials: ['EN19', 'EN24', 'EN9', 'DB6'],
-    image: '/images/product-shaft.jpg',
+    image: '/images/Forged-Shaft.jpg',
     specs: [
       { parameter: 'Diameter Range', value: '25 mm – 350 mm' },
       { parameter: 'Length', value: 'Up to 3500 mm' },
@@ -88,7 +88,7 @@ export const PRODUCTS = [
       'Industrial gearbox assemblies',
     ],
     materials: ['EN19', 'EN24', 'DB6', 'EN9'],
-    image: '/images/product-pinion.jpg',
+    image: '/images/Forged-Pinion.jpg',
     specs: [
       { parameter: 'Module', value: '4 – 20' },
       { parameter: 'Number of Teeth', value: '10 – 60' },

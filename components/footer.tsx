@@ -25,13 +25,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-9 h-9 rounded text-primary-foreground flex-shrink-0">
+              <div className="flex items-center justify-center w-16 h-16 rounded text-primary-foreground flex-shrink-0">
                 {/* <Hammer size={18} strokeWidth={2.5} /> */}
                 <Image
                   src="/vikash_forge.png"
                   alt="Vikash Forge Logo"
-                  width={42}
-                  height={42}
+                  width={76}
+                  height={76}
                 />
               </div>
               <div>
@@ -122,9 +122,23 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Vikash Forge Pvt. Ltd. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} Vikash Forge Pvt. Ltd. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-neutral-300 text-xs">|</span>
+            <p className="text-xs text-muted-foreground">
+              Designed & Developed by{" "}
+              <Link
+                href="https://swachalit.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors underline decoration-dotted underline-offset-2"
+              >
+                Swachalit Business Solutions Pvt. Ltd.
+              </Link>
+            </p>
+          </div>
           <p className="text-xs text-muted-foreground">
             Est. 1995 &bull; Howrah, West Bengal, India
           </p>

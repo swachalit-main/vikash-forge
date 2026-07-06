@@ -28,8 +28,15 @@ function LoadingScreen() {
       className="loading-screen fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background pointer-events-none"
     >
       <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-          <Wrench size={20} className="text-primary-foreground" />
+        <div className="w-20 h-20 rounded flex items-center justify-center">
+          {/* <Wrench size={20} className="text-primary-foreground" /> */}
+          <Image
+            src="/vikash_forge.png"
+            alt="Vikash Forge Logo"
+            width={100}
+            height={100}
+
+          />
         </div>
         <div>
           <p className="font-display font-bold text-base uppercase tracking-widest text-foreground">
