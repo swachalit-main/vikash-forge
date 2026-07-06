@@ -127,7 +127,7 @@ export const MACHINES = [
   {
     id: 'hydraulic-hammer-5t',
     name: '5 Ton Hydraulic Hammer',
-    image: '/images/machine-hydraulic-hammer.jpg',
+    image: '/images/5-ton-hydraulic-hammer.jpg',
     capabilities: [
       'Max forging capacity: up to 500 kg per piece',
       'Ram weight: 5,000 kg',
@@ -145,7 +145,7 @@ export const MACHINES = [
   {
     id: 'pneumatic-hammer-2t',
     name: '2 Ton Pneumatic Hammer',
-    image: '/images/machine-pneumatic-hammer.jpg',
+    image: '/images/2-ton-pneaumatic-hammer.jpg',
     capabilities: [
       'Max forging capacity: up to 80 kg per piece',
       'Ram weight: 2,000 kg',
@@ -163,7 +163,7 @@ export const MACHINES = [
   {
     id: 'manipulator-5t',
     name: '5 Ton Manipulator',
-    image: '/images/machine-manipulator.jpg',
+    image: '/images/5-ton-manupulator.jpg',
     capabilities: [
       'Grip load: 5,000 kg',
       'Billet length: up to 2,000 mm',
@@ -181,7 +181,7 @@ export const MACHINES = [
   {
     id: 'manipulator-3t',
     name: '3 Ton Manipulator',
-    image: '/images/machine-manipulator.jpg',
+    image: '/images/3-ton-manupulator.png',
     capabilities: [
       'Grip load: 3,000 kg',
       'Billet length: up to 1,500 mm',
@@ -198,7 +198,7 @@ export const MACHINES = [
   {
     id: 'vtl-machine',
     name: 'VTL Machine',
-    image: '/images/machine-vtl.jpg',
+    image: '/images/machine-vtl-1.jpg',
     capabilities: [
       'Swing diameter: up to 1,600 mm',
       'Max component height: 1,000 mm',
@@ -215,7 +215,7 @@ export const MACHINES = [
   {
     id: 'lathe-machine',
     name: 'Lathe Machine',
-    image: '/images/machine-lathe.jpg',
+    image: '/images/machine-lathe-1.jpg',
     capabilities: [
       'Swing over bed: 800 mm',
       'Distance between centres: up to 3,000 mm',

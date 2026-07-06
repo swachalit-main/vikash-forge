@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Hammer, MapPin, Phone, Mail, Clock } from 'lucide-react'
+import Image from 'next/image'
 
 const PRODUCT_LINKS = [
   { label: 'Forged Round', href: '/products/round' },
@@ -24,8 +25,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-9 h-9 bg-primary rounded text-primary-foreground flex-shrink-0">
-                <Hammer size={18} strokeWidth={2.5} />
+              <div className="flex items-center justify-center w-9 h-9 rounded text-primary-foreground flex-shrink-0">
+                {/* <Hammer size={18} strokeWidth={2.5} /> */}
+                <Image
+                  src="/vikash_forge.png"
+                  alt="Vikash Forge Logo"
+                  width={42}
+                  height={42}
+                />
               </div>
               <div>
                 <p className="font-display font-bold text-sm uppercase tracking-wider text-foreground">

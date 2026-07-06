@@ -60,10 +60,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex items-center justify-center w-9 h-9 bg-primary rounded text-primary-foreground">
+            <div className="flex items-center justify-center w-9 h-9  rounded text-primary-foreground">
               {/* <Hammer size={18} strokeWidth={2.5} /> */}
               <Image
-                src="/logo_transparent.png"
+                src="/vikash_forge.png"
                 alt="Vikash Forge Logo"
                 width={36}
                 height={36}
