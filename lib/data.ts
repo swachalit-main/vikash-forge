@@ -410,7 +410,7 @@ export const INDUSTRIES = [
 export const CONTACT = {
   address: 'Plot No. 47, Industrial Area, Shibpur, Howrah – 711 102, West Bengal, India',
   phone: ['+91-98310-XXXXX', '+91-033-XXXX-XXXX'],
-  email: 'enquiry@vikashforge.com',
+  email: 'enquiry@vikashforgepvtltd.com',
   hours: {
     weekdays: 'Monday – Saturday: 9:00 AM – 6:30 PM',
     sunday: 'Sunday: Closed',

@@ -107,7 +107,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-3 items-center">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">enquiry@vikashforge.com</span>
+                <span className="text-sm text-muted-foreground">enquiry@vikashforgepvtltd.com</span>
               </li>
               <li className="flex gap-3 items-start">
                 <Clock size={16} className="text-primary flex-shrink-0 mt-0.5" />

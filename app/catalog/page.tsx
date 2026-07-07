@@ -147,7 +147,7 @@ export default function CatalogPage() {
               Send Your Requirement <ArrowRight size={16} />
             </Link>
             <a
-              href="mailto:enquiry@vikashforge.com"
+              href="mailto:enquiry@vikashforgepvtltd.com"
               className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-display font-semibold text-sm uppercase tracking-wider rounded hover:border-primary hover:text-primary transition-colors"
             >
               Email Us Directly
