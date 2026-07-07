@@ -20,24 +20,39 @@ const oswald = Oswald({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vikashforge.com'),
+  metadataBase: new URL('https://www.vikashforgepvtltd.com'),
   title: 'Vikash Forge Pvt. Ltd. | Precision Forging Manufacturer – Howrah, India',
   description:
     'Vikash Forge Pvt. Ltd. is a leading precision forging manufacturer in Howrah, India with 30+ years of experience. Specialists in rounds, shafts, pinions, and hook nuts for railways, automotive, and heavy engineering.',
   keywords:
     'forging manufacturer India, precision forging Howrah, industrial forgings, EN24 steel, hook nut manufacturer, shaft forgings, pinion forgings, Vikash Forge',
-  generator: 'v0.app',
+
+  authors: [
+    {
+      name: 'Swachalit Business Solutions Pvt. Ltd.',
+      url: 'https://swachalit.co.in'
+    }
+  ],
   openGraph: {
     title: 'Vikash Forge Pvt. Ltd. | Precision Forging',
     description: 'Precision Forging. Strength You Can Trust.',
+    url: 'https://www.vikashforgepvtltd.com',
+    siteName: 'Vikash Forge Pvt. Ltd.',
     type: 'website',
-    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }],
+    images: [
+      {
+        url: '/vikash_forge.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vikash Forge Pvt. Ltd. Logo'
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Vikash Forge Pvt. Ltd. | Precision Forging',
     description: 'Precision Forging. Strength You Can Trust.',
-    images: ['/images/og-image.jpg'],
+    images: ['/vikash_forge.png'],
   },
 }
 
