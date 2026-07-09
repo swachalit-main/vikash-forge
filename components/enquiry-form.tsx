@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { CheckCircle2, Loader2, Send } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { PRODUCTS } from '@/lib/data'
 
 const schema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -22,14 +23,7 @@ interface EnquiryFormProps {
   defaultProduct?: string
 }
 
-const PRODUCTS = [
-  'Forged Round',
-  'Hook Nut',
-  'Forged Shaft',
-  'Forged Pinion',
-  'Multiple Products',
-  'Custom / Other',
-]
+
 
 export default function EnquiryForm({ compact = false, defaultProduct = '' }: EnquiryFormProps) {
   const [submitted, setSubmitted] = useState(false)
@@ -124,8 +118,8 @@ export default function EnquiryForm({ compact = false, defaultProduct = '' }: En
           <select {...register('product')} className={inputClass(!!errors.product)}>
             <option value="">Select a product…</option>
             {PRODUCTS.map((p) => (
-              <option key={p} value={p}>
-                {p}
+              <option key={p.slug} value={p.name}>
+                {p.name}
               </option>
             ))}
           </select>

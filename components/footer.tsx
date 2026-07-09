@@ -1,14 +1,12 @@
 import Link from 'next/link'
 import { Hammer, MapPin, Phone, Mail, Clock } from 'lucide-react'
 import Image from 'next/image'
+import { PRODUCTS } from '@/lib/data'
 
-const PRODUCT_LINKS = [
-  { label: 'Forged Round', href: '/products/round' },
-  { label: 'Hook Nut', href: '/products/hook-nut' },
-  { label: 'Forged Shaft', href: '/products/shaft' },
-  { label: 'Forged Pinion', href: '/products/pinion' },
-  { label: 'Wheel Assembly', href: '/products/wheel-assembly' },
-]
+const PRODUCT_LINKS = PRODUCTS.map((product) => ({
+  label: product.name,
+  href: `/products/${product.slug}`,
+}));
 
 const COMPANY_LINKS = [
   { label: 'About Us', href: '/about' },
@@ -98,7 +96,7 @@ export default function Footer() {
               <li className="flex gap-3">
                 <MapPin size={16} className="text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground leading-relaxed">
-                  Plot No. 47, Industrial Area, Shibpur, Howrah – 711 102, West Bengal, India
+                  Vikash Forge Pvt. Ltd., Ghusuri, 108/2, Belur Rd, Mali Panchghara, Howrah, West Bengal 711107
                 </span>
               </li>
               <li className="flex gap-3 items-center">

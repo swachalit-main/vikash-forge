@@ -100,7 +100,7 @@ export default function MachinesPage() {
             {[
               { value: '500 kg', label: 'Max Single Forging Weight' },
               { value: '3,500 mm', label: 'Max Shaft Length' },
-              { value: '1,600 mm', label: 'Max VTL Swing Diameter' },
+              { value: '1,400 mm', label: 'Max VTL Swing Diameter' },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-display font-bold text-4xl text-primary mb-2">{stat.value}</p>

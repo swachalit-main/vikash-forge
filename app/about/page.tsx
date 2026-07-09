@@ -7,14 +7,38 @@ import { useScrollReveal } from '@/hooks/use-scroll-reveal'
 import { MATERIALS } from '@/lib/data'
 
 const TIMELINE = [
-  { year: '1995', event: 'Vikash Forge founded in Howrah, West Bengal with a single pneumatic hammer.' },
-  { year: '2001', event: 'Expanded capacity — installed first 5-Ton Hydraulic Hammer and manipulator system.' },
-  { year: '2007', event: 'Added VTL and lathe machining facility, enabling in-house finish machining.' },
-  { year: '2012', event: 'Secured long-term supply agreements with major Indian Railways component OEMs.' },
-  { year: '2018', event: 'Upgraded to fully automated billet heating and temperature-controlled forging process.' },
-  { year: '2024', event: 'Serving 150+ clients across Railways, Automotive, and Heavy Engineering sectors.' },
-  { year: '2025', event: 'Supplied more than 1,000 wheels to all SAIL units across India within a span of one year.', },
-  { year: '2026', event: 'Delivered more than 1 lakh orders to our valued customers.', },
+  {
+    year: '1995',
+    event: 'Vikash Forge was founded in Howrah, West Bengal with a single steam hammer.',
+  },
+  {
+    year: '2001',
+    event: 'Added VTL and lathe machining facilities, enabling in-house finish machining.',
+  },
+  {
+    year: '2007',
+    event: 'Secured long-term supply agreements with all SAIL units across India.',
+  },
+  {
+    year: '2012',
+    event: 'Serving 250+ clients across India.',
+  },
+  {
+    year: '2018',
+    event: 'Supplied more than 1,000 wheels to all SAIL units across India within a span of one year.',
+  },
+  {
+    year: '2024',
+    event: 'Added a second unit with a 3 Ton Manipulator and a 2 Ton Pneumatic Hammer.',
+  },
+  {
+    year: '2025',
+    event: 'Upgraded Unit 1 with a 5 Ton Manipulator and a 5 Ton Hydraulic Hammer.',
+  },
+  {
+    year: '2026',
+    event: 'Delivered more than 1 lakh orders to our valued customers.',
+  },
 ]
 
 const WHY_US = [
@@ -75,7 +99,7 @@ export default function AboutPage() {
                 <p>
                   Vikash Forge Pvt. Ltd. was established in 1995 by visionary industrialists in Howrah,
                   West Bengal — India&apos;s historic iron and steel hub. What began as a modest forge
-                  shop has grown into a comprehensive precision forging facility spanning 30,000 sq.ft.
+                  shop has grown into a comprehensive precision forging facility.
                 </p>
                 <p>
                   Today, we operate six heavy machines including 5-ton hydraulic hammers, 2-ton pneumatic
@@ -93,10 +117,10 @@ export default function AboutPage() {
             <div className="reveal-right">
               <div className="relative h-[400px] rounded overflow-hidden">
                 <Image
-                  src="/images/about-factory.jpg"
+                  src="/vikash_forge.png"
                   alt="Vikash Forge factory"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>

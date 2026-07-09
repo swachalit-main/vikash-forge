@@ -1,59 +1,59 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useTheme } from 'next-themes'
-import { Menu, X, Sun, Moon, Hammer, ChevronDown } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { Menu, X, Sun, Moon, Hammer, ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { PRODUCTS } from "@/lib/data";
 
 const NAV_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
   {
-    label: 'Products',
-    href: '/products',
+    label: "Products",
+    href: "/products",
     children: [
-      { label: 'Forged Round', href: '/products/round' },
-      { label: 'Hook Nut', href: '/products/hook-nut' },
-      { label: 'Forged Shaft', href: '/products/shaft' },
-      { label: 'Forged Pinion', href: '/products/pinion' },
-      { label: 'Wheel Assembly', href: '/products/wheel-assembly' },
+      ...PRODUCTS.map((product) => ({
+        label: product.name,
+        href: `/products/${product.slug}`,
+      })),
     ],
   },
-  { label: 'Our Machines', href: '/machines' },
-  { label: 'Contact Us', href: '/contact' },
-  { label: 'Catalog', href: '/catalog' },
-]
+  { label: "Our Machines", href: "/machines" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Catalog", href: "/catalog" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [productsOpen, setProductsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const pathname = usePathname()
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   useEffect(() => {
-    setMounted(true)
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    setMounted(true);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    setMobileOpen(false)
-    setProductsOpen(false)
-  }, [pathname])
+    setMobileOpen(false);
+    setProductsOpen(false);
+  }, [pathname]);
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled || mobileOpen
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm'
-          : 'bg-transparent'
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,14 +67,13 @@ export default function Navbar() {
                 alt="Vikash Forge Logo"
                 width={60}
                 height={60}
-
               />
             </div>
             <div className="leading-tight">
-              <p className="font-display font-bold text-sm uppercase tracking-wider text-foreground">
+              <p className="font-display font-bold text-md uppercase tracking-wider text-foreground">
                 Vikash Forge
               </p>
-              <p className="text-[10px] text-muted-foreground tracking-widest uppercase hidden sm:block">
+              <p className="text-sm text-muted-foreground tracking-widest uppercase hidden sm:block">
                 Pvt. Ltd.
               </p>
             </div>
@@ -87,14 +86,17 @@ export default function Navbar() {
                 <div key={link.href} className="relative group">
                   <button
                     className={cn(
-                      'flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded',
+                      "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded",
                       pathname.startsWith(link.href)
-                        ? 'text-primary'
-                        : 'text-muted-foreground hover:text-foreground'
+                        ? "text-primary"
+                        : "text-foreground hover:text-foreground",
                     )}
                   >
                     {link.label}
-                    <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+                    <ChevronDown
+                      size={14}
+                      className="transition-transform group-hover:rotate-180"
+                    />
                   </button>
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-48">
                     <div className="bg-card border border-border rounded shadow-lg overflow-hidden">
@@ -103,10 +105,10 @@ export default function Navbar() {
                           key={child.href}
                           href={child.href}
                           className={cn(
-                            'block px-4 py-2.5 text-sm transition-colors',
+                            "block px-4 py-2.5 text-sm transition-colors",
                             pathname === child.href
-                              ? 'text-primary bg-primary/10'
-                              : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                              ? "text-primary bg-primary/10"
+                              : "text-foreground hover:text-foreground hover:bg-muted",
                           )}
                         >
                           {child.label}
@@ -120,15 +122,15 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'px-3 py-2 text-sm font-medium transition-colors rounded',
+                    "px-3 py-2 text-sm font-medium transition-colors rounded",
                     pathname === link.href
-                      ? 'text-primary'
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? "text-primary"
+                      : "text-foreground hover:text-foreground",
                   )}
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
           </nav>
 
@@ -137,11 +139,11 @@ export default function Navbar() {
             {/* Theme Toggle */}
             {mounted && (
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="p-2 rounded text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
               </button>
             )}
 
@@ -179,7 +181,10 @@ export default function Navbar() {
                     {link.label}
                     <ChevronDown
                       size={14}
-                      className={cn('transition-transform', productsOpen && 'rotate-180')}
+                      className={cn(
+                        "transition-transform",
+                        productsOpen && "rotate-180",
+                      )}
                     />
                   </button>
                   {productsOpen && (
@@ -201,15 +206,15 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'px-3 py-2.5 text-sm font-medium rounded',
+                    "px-3 py-2.5 text-sm font-medium rounded",
                     pathname === link.href
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
             <Link
               href="/contact"
@@ -221,5 +226,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
