@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, CheckCircle2, Zap } from 'lucide-react'
-import { useScrollReveal } from '@/hooks/use-scroll-reveal'
-import { MACHINES } from '@/lib/data'
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Zap } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { MACHINES } from "@/lib/data";
 
 export default function MachinesPage() {
-  useScrollReveal()
+  useScrollReveal();
 
   return (
     <>
@@ -19,8 +19,9 @@ export default function MachinesPage() {
             Our Machines
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed reveal delay-100">
-            Six heavy machines — from 5-ton hydraulic hammers to precision VTL and lathe centres —
-            enabling us to forge and finish components to exacting standards.
+            Eighteen heavy machines — from 5-ton hydraulic hammers to precision
+            VTL and lathe centres — enabling us to forge and finish components
+            to exacting standards.
           </p>
         </div>
       </section>
@@ -28,18 +29,28 @@ export default function MachinesPage() {
       {/* Machines Grid */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {/* Swapped grid for flex-wrap with justify-center to automatically center incomplete rows */}
+          <div className="flex flex-wrap justify-center gap-8">
             {MACHINES.map((machine, i) => (
               <div
                 key={machine.id}
-                className={`reveal delay-${Math.min(i * 100, 300)} bg-card border border-border rounded overflow-hidden group hover:border-primary transition-colors flex flex-col`}
+                /* 
+            w-full: takes full width on mobile
+            md:w-[calc(50%-16px)]: takes clean half width minus the gap offset on tablet
+            xl:w-[calc(33.333%-22px)]: takes clean third width minus the gap offset on desktop
+          */
+                className={`reveal delay-${Math.min(
+                  i * 100,
+                  300,
+                )} w-full md:w-[calc(50%-16px)] xl:w-[calc(33.333%-22px)] bg-card border border-border rounded overflow-hidden group hover:border-primary transition-colors flex flex-col`}
               >
                 {/* Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-56 overflow-hidden shrink-0">
                   <Image
                     src={machine.image}
                     alt={machine.name}
                     fill
+                    sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -64,7 +75,10 @@ export default function MachinesPage() {
                     </p>
                     <ul className="flex flex-col gap-2">
                       {machine.capabilities.map((cap) => (
-                        <li key={cap} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li
+                          key={cap}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
                           <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0 mt-1.5" />
                           {cap}
                         </li>
@@ -79,8 +93,14 @@ export default function MachinesPage() {
                     </p>
                     <ul className="flex flex-col gap-2">
                       {machine.advantages.map((adv) => (
-                        <li key={adv} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle2 size={14} className="text-primary flex-shrink-0 mt-0.5" />
+                        <li
+                          key={adv}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <CheckCircle2
+                            size={14}
+                            className="text-primary flex-shrink-0 mt-0.5"
+                          />
                           {adv}
                         </li>
                       ))}
@@ -98,13 +118,17 @@ export default function MachinesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { value: '500 kg', label: 'Max Single Forging Weight' },
-              { value: '3,500 mm', label: 'Max Shaft Length' },
-              { value: '1,400 mm', label: 'Max VTL Swing Diameter' },
+              { value: "500 kg", label: "Max Single Forging Weight" },
+              { value: "3,500 mm", label: "Max Shaft Length" },
+              { value: "1,400 mm", label: "Max VTL Swing Diameter" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-display font-bold text-4xl text-primary mb-2">{stat.value}</p>
-                <p className="text-background/70 text-sm uppercase tracking-wider">{stat.label}</p>
+                <p className="font-display font-bold text-4xl text-primary mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-background/70 text-sm uppercase tracking-wider">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -119,8 +143,9 @@ export default function MachinesPage() {
             Have a Forging Requirement?
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed reveal delay-100">
-            Share your drawing or specifications with us. Our engineering team will review
-            your requirement and confirm feasibility with a complete quote.
+            Share your drawing or specifications with us. Our engineering team
+            will review your requirement and confirm feasibility with a complete
+            quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4 reveal delay-200">
             <Link
@@ -139,5 +164,5 @@ export default function MachinesPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
