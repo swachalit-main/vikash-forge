@@ -61,7 +61,6 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="flex items-center justify-center w-16 h-16  rounded text-primary-foreground">
-              {/* <Hammer size={18} strokeWidth={2.5} /> */}
               <Image
                 src="/vikash_forge.png"
                 alt="Vikash Forge Logo"
@@ -73,7 +72,7 @@ export default function Navbar() {
               <p className="font-display font-bold text-md uppercase tracking-wider text-foreground">
                 Vikash Forge
               </p>
-              <p className="text-sm text-muted-foreground tracking-widest uppercase hidden sm:block">
+              <p className="text-sm text-muted-foreground tracking-widest uppercase sm:block">
                 Pvt. Ltd.
               </p>
             </div>

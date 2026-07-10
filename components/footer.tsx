@@ -122,7 +122,7 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground text-center">
               &copy; {new Date().getFullYear()} Vikash Forge Pvt. Ltd. All rights reserved.
             </p>
             <span className="hidden sm:inline text-neutral-300 text-xs">|</span>
