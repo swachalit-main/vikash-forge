@@ -522,7 +522,7 @@ export const CONTACT = {
   address:
     "Vikash Forge Pvt. Ltd., Ghusuri, 108/2, Belur Rd, Mali Panchghara, Howrah, West Bengal 711107",
   phone: ["+91-98310-XXXXX", "+91-033-XXXX-XXXX"],
-  email: "enquiry@vikashforgepvtltd.com",
+  email: "info@vikashforgepvtltd.com",
   hours: {
     weekdays: "Monday – Saturday: 9:00 AM – 6:30 PM",
     sunday: "Sunday: Closed",
