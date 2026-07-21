@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs-app
+    restart: unless-stopped
+
+    ports:
+      - "3002:3000"
+
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    # Uncomment if you use environment variables
+    # env_file:
+    #   - .env.production
